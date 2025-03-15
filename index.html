@@ -8,32 +8,41 @@
 </head>
 <body class="mx-0 my-0 p-0">
     <!-- THIS is the navbar section-->
-  <nav class="bg-white-100  px-5 py-4 mx-auto my-3 space-x-2 flex justify-around items-center">
-      <div class="logo">
-        <h2 class="text-black text-2xl font-sans font-extrabold"><span class="bg-[rgba(57,219,74,1)] text-white p-1 rounded-md">F</span>OODI</h2>
+    <nav class="p-5 w-1 bg-white md:flex md:items-center md:justify-between">
+      <div class="flex justify-between">
+          <h2 class="text-black text-2xl font-sans font-extrabold"><span class="bg-[rgba(57,219,74,1)] text-white p-1 rounded-md">F</span>OODI</h2>
+          <span class="w-14  mx-2 mt-2 md:hidden block">
+            <img src="./images/b.png" alt="hamburger btn" class="w-10" onclick="Menu(this)" name="harm">
+            <img src="./images/C.png" alt="clo" name="close" onclick="Menu(this)" class="w-10 hidden">
+          </span>
       </div>
-      <ul class="mx-auto flex justify-center space-x-10 sm:absolute top-20 left-0 
-        right-0 flex-col text-center overflow-hidden" id="list">
-        <li><a href="#" class="active text-[rgba(57,219,74,1)] sm:p-5 ">Home</a></li>
-        <li><a href="#" class="text-black  hover:text-green-500">Menu 
-          <select name="menu" id="menu" class="bg-transparent text-green-300"></select></a></li>
-        <li><a href="#" class="text-black  hover:text-green-500">Services <select name="#"class="bg-transparent text-green-300"></select></a></li>
-        <li><a href="#" class="text-black  hover:text-green-500">Offers</a></li>
+      <ul class="md:flex md:items-center  z-[-1] md:z-auto md:static absolute bg-white w-full
+      left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 top-[-400px] transition-all ease-in duration-500">
+        <li class="mx-4 my-6 md:0">
+          <a href="#" class="active text-[rgba(57,219,74,1)] ">Home</a>
+        </li>
+        <li class="mx-4 my-6 md:0">
+          <a href="#" class="text-black ">Menu<select name="menu" id="menu" class="bg-transparent text-green-300"></select></a>
+        </li>
+        <li class="mx-4 my-6 md:0">
+          <a href="#" class="text-black ">Services   <select name="menu" id="menu" class="bg-transparent text-green-300"></select></a>
+        </li>
+        <li class="mx-4 my-6 md:0">
+          <a href="#" class="text-black ">Offers</a>
+        </li>
+       
       </ul>
-      <div class="mx-3 flex space-x-5 justify-end items-center">
+      <div class="hidden md:flex space-x-4 items-center justify-center">
         <img src="./images/🦆 icon _search_.png" width="20px" alt="search">
-        <div class="mx-5 relative ">
-           <div class=" absolute top- -10 h-4 w-4 left-3 text-white text-center bg-[rgba(57,219,74,1)] rounded-full    items-center"><p class="h-1 text-xs">8</p></div>
-           <img src="./images/Vector.png" width="20px" alt="bag">
-        </div>
-          <button class="bg-[rgba(57,219,74,1)] text-white px-4 py-2 mx-3 flex rounded-3xl"><img src="./images/phone.png" alt="phone" class="mx-2 justify-center">Contact</button>
+        <div class="mx-5 relative">
+          <div class=" absolute top- -10 h-4 w-4 left-3 text-white text-center bg-[rgba(57,219,74,1)] rounded-full   items-center"><p class="h-1 text-xs ">8</p></div>
+          <img src="./images/Vector.png" width="20px" alt="bag">
+       </div>
+        <button class="bg-[rgba(57,219,74,1)] text-white px-4 py-2 mx-3 flex rounded-3xl"><img src="./images/phone.png" alt="phone" class="mx-2 justify-center">Contact</button>
       </div>
-      <div class="icon lg:hidden">
-        <h1 onclick="toggleMenu()">=</h1>
-      </div>
-  </nav>
+    </nav>
     <!-- This is the home page section with 2 main containers(divs) -->
-  <section class="w-full h-screen flex gap-2 p-10 justify-between">
+  <section class="flex-col justify-content md:w-full md:h-screen md:flex md:gap-2 md:p-10 md:justify-between">
       <!-- first container taking half of the section -->
     <div class="w-1/2 h-full justify-center items-center ml-20">
         <h1 class="font-bold text-5xl mx-auto">Dive Into Delights <br>
