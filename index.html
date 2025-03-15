@@ -8,15 +8,16 @@
 </head>
 <body class="mx-0 my-0 p-0">
     <!-- THIS is the navbar section-->
-    <nav class="bg-white-100  px-5 py-4 mx-auto my-3 space-x-2 flex justify-around items-center">
+  <nav class="bg-white-100  px-5 py-4 mx-auto my-3 space-x-2 flex justify-around items-center">
       <div class="logo">
         <h2 class="text-black text-2xl font-sans font-extrabold"><span class="bg-[rgba(57,219,74,1)] text-white p-1 rounded-md">F</span>OODI</h2>
       </div>
-      <ul class="mx-auto flex justify-center space-x-10">
-        <li><a href="#" class="active text-[rgba(57,219,74,1)]">Home</a></li>
+      <ul class="mx-auto flex justify-center space-x-10 sm:absolute top-20 left-0 
+        right-0 flex-col text-center overflow-hidden" id="list">
+        <li><a href="#" class="active text-[rgba(57,219,74,1)] sm:p-5 ">Home</a></li>
         <li><a href="#" class="text-black  hover:text-green-500">Menu 
           <select name="menu" id="menu" class="bg-transparent text-green-300"></select></a></li>
-        <li><a href="#" class="text-black  hover:text-green-500">Services <select name="#"></select></a></li>
+        <li><a href="#" class="text-black  hover:text-green-500">Services <select name="#"class="bg-transparent text-green-300"></select></a></li>
         <li><a href="#" class="text-black  hover:text-green-500">Offers</a></li>
       </ul>
       <div class="mx-3 flex space-x-5 justify-end items-center">
@@ -27,11 +28,14 @@
         </div>
           <button class="bg-[rgba(57,219,74,1)] text-white px-4 py-2 mx-3 flex rounded-3xl"><img src="./images/phone.png" alt="phone" class="mx-2 justify-center">Contact</button>
       </div>
-    </nav>
+      <div class="icon lg:hidden">
+        <h1 onclick="toggleMenu()">=</h1>
+      </div>
+  </nav>
     <!-- This is the home page section with 2 main containers(divs) -->
-<section class="w-full h-screen flex gap-2 p-10 justify-between">
+  <section class="w-full h-screen flex gap-2 p-10 justify-between">
       <!-- first container taking half of the section -->
-      <div class="w-1/2 h-full justify-center items-center ml-20">
+    <div class="w-1/2 h-full justify-center items-center ml-20">
         <h1 class="font-bold text-5xl mx-auto">Dive Into Delights <br>
            Of Delectable <span class=" text-[rgba(57,219,74,1)]">Food</span>
         </h1><br>
@@ -44,11 +48,11 @@
             <img src="./images/Polygon 1.png" alt="vid">
           </div>
         </div>
-      </div>
-      <!-- second container equally taking half of the section -->
-      <div class="relative mt-5 w-1/2 h-full flex justify-center items-start">
+    </div>
+    <!-- second container equally taking half of the section -->
+    <div class="relative mt-5 w-1/2 h-full flex justify-center items-start">
         <!-- this is div with position relative,border-radius:50%-->
-          <div class="relative h-96 w-96 bg-[rgba(57,219,74,1)] rounded-full "> 
+        <div class="relative h-96 w-96 bg-[rgba(57,219,74,1)] rounded-full "> 
             <!-- image with position absolute translate-y(bottom-fitness) translate-x(center) -->
              <img src="./images/Intersect.png" alt="profile" class="absolute w-100 h-100
              -top-10 -left-3 transform-translate-x-1 translate-y-1">
@@ -61,7 +65,11 @@
                </div>
                <div>
                 <p class="space-x-2 font-medium text-sm">Spicy noodles</p>
-                <p>⭐⭐⭐</p>
+                <div class="flex">
+                  <img src="fi-sr-star.png" alt="star" class="h-3">
+                  <img src="fi-sr-star.png" alt="star" class="h-3">
+                  <img src="fi-sr-star.png" alt="star" class="h-3">
+                </div>
                 <p><span class="text-red-500 text-sm">$</span>18.00</p>
                </div>
               </div>
@@ -72,113 +80,261 @@
                 </div>
                 <div>
                  <p class="space-x-2 font-medium text-sm">Vegeterian salade</p>
-                 <p>⭐⭐⭐⭐</p>
+                 <div class="flex">
+                  <img src="fi-sr-star.png" alt="star" class="h-3">
+                  <img src="fi-sr-star.png" alt="star" class="h-3">
+                  <img src="fi-sr-star.png" alt="star" class="h-3">
+                  <img src="fi-sr-star.png" alt="star" class="h-3">
+                </div>
                  <p><span class="text-red-500 text-sm">$</span>23.00</p>
                 </div>
               </div>
             </div>
-          </div>
-          <!-- div for arectangle positioned at the top-left side of the container -->
-          <div class="absolute -top-10 -left-12 w-41 h-30 -mt-10">
+        </div>
+          <!-- div for a rectangle positioned at the top-left side of the container -->
+          <div class="absolute -top-10 -left-16 w-41 h-30">
             <img src="./images/rectangle 42.png" alt="rect" class="w-100 h-100 object-cover">
-            <div class="absolute inset-0 flex justify-center items-center text-red-500 text-lg font-medium">
-              Hot Spicy Food
+            <div class="absolute inset-0 flex justify-center items-center text-red-500 text-sm font-medium">
+              Hot Spicy Food 🌶
             </div>
           </div>
         </div>
-      </div>
-    </section>    
-    <!-- this is the customer section -->
-    <section class="w-full h-screen">
+    </div>
+  </section>    
+    <!-- this is the customer section with 2main divs and 4 cards -->
+  <section class="w-full h-screen">
+      <!-- div 1 containig the heading -->
       <div class="flex flex-col gap-y-4">
         <h4 class="text-red-500 text-center">CUSTOMER FAVORITE</h4>
         <h1 class="font-bold text-center my-2 text-2xl">Popular Categories</h1>
-   </div>
-   <div class="flex justify-between p-28 -mt-10">
-    <div class=" flex-col  w-50 h-max
-       items-center text-center shadow-lg rounded-xl bg-white p-10">
+      </div>
+      <!-- div 2 containing 4 cards-->
+      <div class="flex justify-between p-28 -mt-10">
+        <!-- card 1 -->
+       <div class=" flex-col  w-50 h-max items-center text-center shadow-lg rounded-xl bg-white p-10
+        transition-transform duration-500 ease-in-out hover:scale-110">
        <img src="./images/ham.png" alt="bread" class="w-24 h-24 p-1 bg-green-200 rounded-full">
        <h3 class="">Main Dish</h3>
        <p class="">(86 Dishes)</p> 
    </div>
-   <div class=" flex-col  w-50 h-max  
-     items-center text-center shadow-lg rounded-xl bg-white p-10">
+   <!-- card 2 -->
+   <div class=" flex-col  w-50 h-max  items-center text-center shadow-lg rounded-xl bg-white p-10         transition-transform duration-500 ease-in-out hover:scale-110">
      <img src="./images/pngwing 6.png" alt="pizza" class="w-24 h-24 p-1 bg-green-200 rounded-full">
      <h3 class="text-lg text-black">Break Fast</h3>
      <p class="text-sm text-gray-500">(12 Break fast)</p> 
    </div>
-   <div class=" flex-col  w-50 h-max 
-     items-center text-center shadow-lg rounded-xl bg-white p-10">
+   <!-- card 3 -->
+   <div class=" flex-col  w-50 h-max items-center text-center shadow-lg rounded-xl bg-white p-10 transition-transform duration-500 ease-in-out hover:scale-110">
      <img src="./images/pngwing 3.png" alt="bread" class=" w-24 h-24 p-1 bg-green-200 rounded-full">
      <h3 class="text-lg text-black">Dessert</h3>
      <p class="text-sm text-gray-500">(48 dessert)</p> 
    </div>
-
-   <div class=" flex-col  w-50 h-max 
-     items-center text-center shadow-lg rounded-xl bg-white p-10 ">
+    <!-- card 4 -->
+    <div class=" flex-col  w-50 h-max items-center text-center shadow-lg rounded-xl bg-white p-10 transition-transform duration-500 ease-in-out hover:scale-110">
      <img src="./images/pngwing 7.png" alt="bread" class="w-24 h-24 p-1 bg-green-200 rounded-full">
      <h3 class="text-md text-black">Browse All</h3>
      <p class="text-sm text-gray-500">(255 items)</p> 
+    </div>
    </div>
- </div>
-    </section>
+  </section>
     
-  <!-- this is the dishes section -->
-   <section class="w-full h-screen">
-    <div class="flex justify-center items-center">
+  <!-- this is the dishes section with 2 containers and 3 cards -->
+  <section class="w-full h-screen">
+    <!-- container 1 -->
+    <div class="flex justify-around items-center">
       <div class="flex flex-col w-full ">
         <h4 class="text-red-500 mx-5">Special Dishes</h4>
         <h1 class="font-bold my-3 mx-5 text-2xl">Stand Out Dishes <br> From Our Dishes</h1>
       </div>
-      <button class="bg-gray-200 w-10 h-10 gap-x-3 p-1 rounded-full items-center ml-4"> < </button>
-      <button class="bg-[rgba(57,219,74,1)] w-10 h-10 space-x-4 p-1 rounded-full items-center ml-4 text-white"> > </button>
+      <div class="flex justify-center mr-6">
+        <button class="bg-gray-200 w-10 h-10 gap-x-3 p-1 rounded-full items-center ml-4"> < </button>
+        <button class="bg-[rgba(57,219,74,1)] w-10 h-10 space-x-4 p-1 rounded-full items-center 
+        ml-4 text-white"> > </button>
+      </div>
     </div>
+     <!--container 2 with 3 salad cards-->
       <div class="flex justify-between p-28">
-        <div class=" flex-col  w-60 h-max border-s-green-400 
-         items-center shadow-lg rounded-xl bg-white p-10">
+        <!-- salad 1 -->
+        <div class=" flex-col  w-60 h-max items-center shadow-lg rounded-xl bg-white
+         p-10 transition-transform duration-500 ease-in-out hover:scale-110">
          <div class="w-10 h-10 bg-[rgba(57,219,74,1)] -mt-10 ml-40 rounded-bl-2xl rounded-tr-2xl p-3">
           <img src="./images/fi-sr-heart.png" alt="heart" class="w-4 h-4">
          </div>
-         <img src="./images/Fattoush salad.png" alt="bread" class="w-32 h-32">
+         <div class="flex justify-center">
+          <img src="./images/Fattoush salad.png" alt="bread" class="w-32 h-32 transition-transform ease-in-out
+          duration-1000 hover:-rotate-180">
+         </div>
          <h3 class="mt-2 font-medium">Fattoush salad</h3>
          <p class="text-sm text-gray-500">Description of items</p>
          <div class="flex justify-between">
           <p><span class="text-red-500 text-sm">$</span>24.00</p>
-          <p>⭐4.9</p>
+          <p class="flex items-center"><img src="fi-sr-star.png" alt="star" class="h-3">4.9</p>
          </div>
         </div>
+        <!-- salad 2 -->
         <div class=" flex-col  w-60 h-max border-s-green-400 
-         items-center shadow-lg rounded-xl bg-white p-10">
+         items-center shadow-lg rounded-xl bg-white p-10 transition-transform duration-500 ease-in-out hover:scale-110">
          <div class="w-10 h-10 bg-[rgba(57,219,74,1)] -mt-10 ml-40 rounded-bl-2xl rounded-tr-2xl p-3">
-          <img src="./images/fi-sr-heart.png" alt="heart" class="w-4 h-4">
+          <img src="./images/fi-br-heart.png" alt="heart" class="w-4 h-4">
          </div>
-         <img src="./images/Vegetable salad.png" alt="bread" class="w-32 h-32">
+         <div class="flex justify-center">
+           <img src="./images/Vegetable salad.png" alt="bread" class="w-32 h-32 transition-transform ease-in-out
+           duration-1000 hover:-rotate-180">
+         </div>
          <h3 class="mt-2 font-medium">Vegetable salad</h3>
          <p class="text-sm text-gray-500">Description of items</p>
          <div class="flex justify-between">
           <p><span class="text-red-500 text-sm">$</span>26.00</p>
-          <p>⭐4.6</p>
+          <p class="flex items-center"><img src="fi-sr-star.png" alt="star" class="h-3">4.6</p>
          </div>
         </div>
+        <!-- salad 3 -->
         <div class=" flex-col  w-60 h-max border-s-green-400 
-         items-center shadow-lg rounded-xl bg-white p-10">
+         items-center shadow-lg rounded-xl bg-white p-10 transition-transform duration-500 ease-in-out hover:scale-110">
          <div class="w-10 h-10 bg-[rgba(57,219,74,1)] -mt-10 ml-40 rounded-bl-2xl rounded-tr-2xl p-3">
-          <img src="./images/fi-sr-heart.png" alt="heart" class="w-4 h-4">
+          <img src="./images/fi-br-heart.png" alt="heart" class="w-4 h-4">
          </div>
-         <img src="./images/Egg salad.png" alt="bread" class="w-32 h-32">
+         <div class="flex justify-center">
+          <img src="./images/Egg salad.png" alt="bread" class="w-32 h-32 transition-transform ease-in-out
+          duration-1000 hover:-rotate-180">
+         </div>
          <h3 class="mt-2 font-medium">Egg Salad</h3>
          <p class="text-sm text-gray-500">Description of items</p>
          <div class="flex justify-between">
           <p><span class="text-red-500 text-sm">$</span>23.00</p>
-          <p>⭐4.5</p>
+          <p class="flex items-center"><img src="fi-sr-star.png" alt="star" class="h-3">4.5</p>
          </div>
        </div>
       </div>
-   </section>
-   <section class="w-full h-screen ">
-    <>
-  
-   </section>
-  
+  </section>
+   <!-- this is the testimonial section with 2 containers -->
+  <section class="w-full h-screen flex  p-10 justify-between items-start">
+    <!-- first container -->
+      <div class="relative w-1/2 h-full flex justify-center items-center">
+        <!-- this is div with position relative,border-radius:50%-->
+        <div class="relative h-60 w-72 bg-[rgba(57,219,74,1)] rounded-t-full rounded-bl-3xl rounded-br-3xl"> 
+           <img src="./images/pngwing 2.png" alt="profile" class="absolute h-[395px]
+           -mt-[160px] -left-1 transform-translate-x-1 translate-y-1">
+          <div class="absolute -bottom-16 left-28 w-41 h-28">
+            <img src="./images/rectangle 41.png" alt="rect" class="w-100 h-100 object-cover">
+            <div class="absolute inset-0 flex justify-center items-center -mt-7 text-sm font-medium">
+              Our best chef😀
+            </div>
+          </div>
+           <img src="./images/😋.png" alt="em" class="absolute h-10 top-20 -left-3">
+          <img src="./images/🍕.png" alt="pizza" class="absolute h-10 top-20 -right-3"> 
+        </div>
+      </div> 
+       <!-- second container for the testimonies -->
+        <div class="w-1/2 h-full justify-center mt-10 items-start">
+          <p class="text-red-500">Testimonials</p>
+          <h1 class="font-bold text-5xl mx-auto">What Our Customers 
+            <br>Say about us
+          </h1><br>
+          <p class="text-gray-400 text-md">I had the pleasure of dining at FOODI last night and <br>
+            am still raving about hte experience!The attention to <br>
+            detail in presentation and service was impeccable
+          </p>
+          <div class="flex w-50 justify-start gap-28">
+            <div class="flex relative mt-7 items-center">
+              <img src="./images/Mask group.png" alt="1" class="w-12">
+              <img src="./images/Mask group-1.png" alt="2" class="w-12 absolute left-[34px]">
+              <img src="./images/Mask group-2.png" alt="3" class="w-12 absolute left-[67px]">
+            </div>
+            <div class="flex flex-col mt-7 items-center">
+              <p>Customer Feedback</p>
+               <p class="flex items-center"><img src="fi-sr-star.png" alt="star" class="h-3">4.9 <span class="text-sm text-gray-400"> (18.6k Reviews)</span></p>
+            </div>
+          </div>
+        </div>     
+  </section>
+   <!-- stories and services section having 2 containers -->
+  <section class="w-full h-screen flex gap-2 p-10 justify-between">
+    <!-- first container taking half of the section -->
+    <div class="w-1/2 h-full justify-center items-center mx-5 ml-20">
+      <p class="text-red-500 mx-2">OUR STORY & SERVICES</p>
+      <h1 class="font-bold text-5xl mx-auto my-10">Our Culinary<br>
+         Of Delectable
+      </h1>
+      <p class="text-gray-400 text-md font-semibold">Where Each Plate Weaves a Story Of Culinary <br>
+        Mastery and Passionate Craftmanship</p>
+        <button class="bg-[rgba(57,219,74,1)] text-white px-6 py-2 mx-3 mt-5 flex rounded-3xl">Explore</button>
+    </div> 
+       <!--second container for cards with display grid-->
+        <div class="w-1/2 h-full justify-center items-center grid grid-cols-2 gap-x-2 gap-y-2">
+          <!-- grid card 1 -->
+          <div class=" flex-col  w-44 h-max border-s-green-400 
+          items-center shadow-lg rounded-xl bg-white p-5 transition-transform duration-500 ease-in-out hover:scale-110">
+          <div class="flex justify-center">
+            <img src="./images/fi-rr-salad.png" alt="bread" class="w-10 h-10">
+          </div>
+          <h3 class="mt-2 font-medium  text-green-300 text-center">Catering</h3>
+          <p class="text-sm text-green-300 text-center">Delight your guest with our flavors and presentation</p>
+         </div>
+         <!-- grid card 2 -->
+         <div class=" flex-col  w-44 h-max border-s-green-400 
+          items-center shadow-lg rounded-xl bg-white p-5 transition-transform duration-500 ease-in-out hover:scale-110">
+          <div class="flex justify-center">
+            <img src="./images/fi-rr-salad.png" alt="bread" class="w-10 h-10">
+          </div>
+          <h3 class="mt-2 font-medium  text-green-300 text-center">Fast delivery</h3>
+          <p class="text-sm text-green-300 text-center">Delight your guest with our flavors and presentation</p>
+         </div>
+         <!-- grid card 3 -->
+         <div class=" flex-col  w-44 h-max border-s-green-400 
+          items-center shadow-lg rounded-xl bg-white p-5 transition-transform duration-500 ease-in-out hover:scale-110">
+          <div class="flex justify-center">
+            <img src="./images/fi-rr-shopping-cart-check.png" alt="bread" class="w-10 h-10">
+          </div>
+          <h3 class="mt-2 font-medium  text-green-300 text-center">Online Ordering</h3>
+          <p class="text-sm text-green-300 text-center">Delight your guest with our flavors and presentation</p>
+         </div>
+         <!-- grid card 4 -->
+         <div class=" flex-col  w-44 h-max border-s-green-400 
+          items-center shadow-lg rounded-xl bg-white p-5 transition-transform duration-500 ease-in-out hover:scale-110">
+          <div class="flex justify-center">
+            <img src="./images/fi-rr-gift.png" alt="bread" class="w-10 h-10">
+          </div>
+          <h3 class="mt-2 font-medium  text-green-300 text-center">Gift Card</h3>
+          <p class="text-sm text-green-300 text-center">Delight your guest with our flavors and presentation</p>
+         </div>
+      </div>   
+  </section>
+  <section class="w-full grid grid-cols-4 ml-20 p-10 justify-center">
+    <div class="">
+      <h2 class="text-black text-md font-sans font-semibold"><span class="bg-[rgba(57,219,74,1)] text-white p-1 rounded-md">F</span>OODI</h2>
+      <p class="text-gray-400 text-sm mt-2">Savor the artistry where <br> every dish is a culinary<br>masterpiece</p>
+    </div>
+    <div>
+      <h2 class="text-black  text-md font-sans font-semibold">Useful Links</h2>
+      <p class="text-gray-400 text-sm mt-2">About Us</p>
+      <p class="text-gray-400 text-sm">Events</p>
+      <p class="text-gray-400 text-sm">Blogs</p>
+      <p class="text-gray-400 text-sm">FAQ</p>
+    </div>
+    <div>
+      <h2 class="text-black  text-md font-sans font-semibold">Main Menu</h2>
+      <p class="text-gray-400 text-sm mt-2">Home</p>
+      <p class="text-gray-400 text-sm">Offers</p>
+      <p class="text-gray-400 text-sm">Menus</p>
+      <p class="text-gray-400 text-sm">Reservation</p>
+    </div>
+    <div>
+      <h2 class="text-black text-md font-sans font-semibold">Contact us</h2>
+      <p class="text-gray-400 text-sm mt-2">example@email.com</p>
+      <p class="text-gray-400 text-sm">+64 958 248 966</p>
+      <p class="text-gray-400 text-sm">Social media</p>
+    </div>
+  </section>
+  <footer class="flex justify-start gap-20 ml-24">
+    <div class="flex justify-center gap-4 items-center mx-3">
+      <img src="./images/🦆 icon _facebook_.png" alt="facebook " class="bg-[rgba(57,219,74,1)] rounded-full p-2 w-7 h-7">
+      <img src="./images/🦆 icon _instagram_.png" alt="instagram" class="w-4">
+      <img src="./images/🦆 icon _twitter_.png" alt="twitter" class="w-4">
+      <img src="./images/🦆 icon _youtube_.png" alt="youtube" class="w-4">
+    </div>
+    <p class="text-sm text-gray-400">copyright &copy 2023 Dscode|All rights reserved</p>
+  </footer>
+  <script src="script.js"></script>
 </body>
 </html>
