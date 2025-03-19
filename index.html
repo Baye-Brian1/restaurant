@@ -8,15 +8,14 @@
 </head>
 <body class="mx-0 my-0 p-0">
     <!-- THIS is the navbar section-->
-    <nav class="p-5 w-1 bg-white md:flex md:items-center md:justify-between">
+    <nav class="p-5 bg-white md:w-full mob:bg-slate-300 md:flex md:items-center md:justify-between">
       <div class="flex justify-between">
           <h2 class="text-black text-2xl font-sans font-extrabold"><span class="bg-[rgba(57,219,74,1)] text-white p-1 rounded-md">F</span>OODI</h2>
-          <span class="w-14  mx-2 mt-2 md:hidden block">
-            <img src="./images/b.png" alt="hamburger btn" class="w-10" onclick="Menu(this)" name="harm">
-            <img src="./images/C.png" alt="clo" name="close" onclick="Menu(this)" class="w-10 hidden">
+          <span class="w-14  mx-2 -mt-2 md:hidden block">
+           <h1 id="icon" class="text-green-300 text-5xl" onclick="Menu()">=</h1>
           </span>
       </div>
-      <ul class="md:flex md:items-center  z-[-1] md:z-auto md:static absolute bg-white w-full
+      <ul class="md:flex md:items-center text-center  md:z-auto md:static absolute bg-white w-full
       left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 top-[-400px] transition-all ease-in duration-500">
         <li class="mx-4 my-6 md:0">
           <a href="#" class="active text-[rgba(57,219,74,1)] ">Home</a>
@@ -42,16 +41,16 @@
       </div>
     </nav>
     <!-- This is the home page section with 2 main containers(divs) -->
-  <section class="flex-col justify-content md:w-full md:h-screen md:flex md:gap-2 md:p-10 md:justify-between">
+  <section class="md:w-full md:h-screen md:flex md:gap-2 p-10 md:justify-between items-center">
       <!-- first container taking half of the section -->
-    <div class="w-1/2 h-full justify-center items-center ml-20">
-        <h1 class="font-bold text-5xl mx-auto">Dive Into Delights <br>
-           Of Delectable <span class=" text-[rgba(57,219,74,1)]">Food</span>
+    <div class="md:h-full text-center items-center md:justify-center md:items-start">
+        <h1 class="font-bold md:text-5xl text-lg md:mx-auto">Dive Into Delights 
+          Of Delectable <span class=" text-[rgba(57,219,74,1)]">Food</span>
         </h1><br>
-        <p class="text-gray-400 text-lg">where Each Plate Weaves a Story Of Culinary <br>
+        <p class="text-gray-400 md:text-lg text-md text-center">where Each Plate Weaves a Story Of Culinary <br>
           Mastery and Passionate Craftmanship</p>
         <div class="mx-auto my-4 flex justify-start space-x-4 items-center">
-          <button class="bg-[rgba(57,219,74,1)] text-white px-4 py-2 mx-3 flex rounded-3xl">Order Now</button>
+          <button class="bg-[rgba(57,219,74,1)] text-white px-4 py-2 md:mx-3 mx-6 flex rounded-3xl">Order Now</button>
           <p class="font-semibold text-lg">Watch Video</p>
           <div class="border bg-slate-200 p-4 rounded-full">
             <img src="./images/Polygon 1.png" alt="vid">
@@ -61,12 +60,12 @@
     <!-- second container equally taking half of the section -->
     <div class="relative mt-5 w-1/2 h-full flex justify-center items-start">
         <!-- this is div with position relative,border-radius:50%-->
-        <div class="relative h-96 w-96 bg-[rgba(57,219,74,1)] rounded-full "> 
+        <div class="md:relative md:flex hidden md:h-96 md:w-96 md:bg-[rgba(57,219,74,1)] md:rounded-full "> 
             <!-- image with position absolute translate-y(bottom-fitness) translate-x(center) -->
-             <img src="./images/Intersect.png" alt="profile" class="absolute w-100 h-100
+             <img src="./images/Intersect.png" alt="profile" class="md:absolute w-100 h-100
              -top-10 -left-3 transform-translate-x-1 translate-y-1">
             <!-- div positioned at the bottom of the container -->
-            <div class="flex gap-2">
+            <div class="md:flex hidden gap-2">
               <div class="flex w-30 h-30 bg-white shadow-md gap-3 px-6 py-1 rounded-xl absolute -bottom-10
                 -left-10">
                <div>
@@ -101,7 +100,7 @@
             </div>
         </div>
           <!-- div for a rectangle positioned at the top-left side of the container -->
-          <div class="absolute -top-10 -left-16 w-41 h-30">
+          <div class="md:absolute md:flex hidden -top-12 -left-28 w-41 h-30">
             <img src="./images/rectangle 42.png" alt="rect" class="w-100 h-100 object-cover">
             <div class="absolute inset-0 flex justify-center items-center text-red-500 text-sm font-medium">
               Hot Spicy Food 🌶
@@ -111,67 +110,68 @@
     </div>
   </section>    
     <!-- this is the customer section with 2main divs and 4 cards -->
-  <section class="w-full h-screen">
+  <section class="md:w-full md:h-screen p-10">
       <!-- div 1 containig the heading -->
-      <div class="flex flex-col gap-y-4">
+      <div class="md:flex md:flex-col md:gap-y-4">
         <h4 class="text-red-500 text-center">CUSTOMER FAVORITE</h4>
         <h1 class="font-bold text-center my-2 text-2xl">Popular Categories</h1>
       </div>
       <!-- div 2 containing 4 cards-->
-      <div class="flex justify-between p-28 -mt-10">
+    <div class="md:flex mx-auto md:justify-around justify-around h-full items-center space-y-4">
         <!-- card 1 -->
-       <div class=" flex-col  w-50 h-max items-center text-center shadow-lg rounded-xl bg-white p-10
-        transition-transform duration-500 ease-in-out hover:scale-110">
-       <img src="./images/ham.png" alt="bread" class="w-24 h-24 p-1 bg-green-200 rounded-full">
+      <div class="flex flex-col w-50 h-60 md:w-50 md:h-max items-center text-center shadow-lg rounded-xl bg-white md:p-8 transition-transform duration-500 ease-in-out hover:scale-110">
+          <img src="./images/ham.png" alt="bread" class="w-36 h-36 items-center md:justify-center justify-center p-1 bg-green-200 rounded-full">
        <h3 class="">Main Dish</h3>
        <p class="">(86 Dishes)</p> 
-   </div>
-   <!-- card 2 -->
-   <div class=" flex-col  w-50 h-max  items-center text-center shadow-lg rounded-xl bg-white p-10         transition-transform duration-500 ease-in-out hover:scale-110">
-     <img src="./images/pngwing 6.png" alt="pizza" class="w-24 h-24 p-1 bg-green-200 rounded-full">
-     <h3 class="text-lg text-black">Break Fast</h3>
-     <p class="text-sm text-gray-500">(12 Break fast)</p> 
-   </div>
-   <!-- card 3 -->
-   <div class=" flex-col  w-50 h-max items-center text-center shadow-lg rounded-xl bg-white p-10 transition-transform duration-500 ease-in-out hover:scale-110">
-     <img src="./images/pngwing 3.png" alt="bread" class=" w-24 h-24 p-1 bg-green-200 rounded-full">
-     <h3 class="text-lg text-black">Dessert</h3>
-     <p class="text-sm text-gray-500">(48 dessert)</p> 
-   </div>
-    <!-- card 4 -->
-    <div class=" flex-col  w-50 h-max items-center text-center shadow-lg rounded-xl bg-white p-10 transition-transform duration-500 ease-in-out hover:scale-110">
-     <img src="./images/pngwing 7.png" alt="bread" class="w-24 h-24 p-1 bg-green-200 rounded-full">
-     <h3 class="text-md text-black">Browse All</h3>
-     <p class="text-sm text-gray-500">(255 items)</p> 
+      </div>
+         <!-- card 2 -->
+     <div class="flex flex-col w-50 h-60 md:w-50 md:h-max items-center text-center shadow-lg rounded-xl
+      bg-white md:p-8 transition-transform duration-500 ease-in-out hover:scale-110">
+       <img src="./images/pngwing 6.png" alt="pizza" class="w-36 h-36 p-1 bg-green-200 rounded-full">
+       <h3 class="text-lg text-black">Break Fast</h3>
+       <p class="text-sm text-gray-500">(12 Break fast)</p> 
+      </div>
+        <!-- card 3 -->
+      <div class="flex flex-col w-50 h-60 w-50 md:h-max items-center text-center shadow-lg rounded-xl bg-white md:p-8
+        transition-transform duration-500 ease-in-out hover:scale-110">
+       <img src="./images/pngwing 3.png" alt="bread" class=" w-36 h-36 p-1 bg-green-200 rounded-full">
+       <h3 class="text-lg text-black">Dessert</h3>
+       <p class="text-sm text-gray-500">(48 dessert)</p> 
+      </div>
+        <!-- card 4 -->
+     <div class="flex flex-col w-50 h-60 w-50 md:h-max items-center text-center shadow-lg rounded-xl bg-white p-4 md:p-8      transition-transform duration-500 ease-in-out hover:scale-110">
+       <img src="./images/pngwing 7.png" alt="bread" class="w-36 h-36 p-1 bg-green-200 rounded-full">
+       <h3 class="text-md text-black">Browse All</h3>
+        <p class="text-sm text-gray-500">(255 items)</p> 
+      </div>
     </div>
-   </div>
   </section>
     
   <!-- this is the dishes section with 2 containers and 3 cards -->
-  <section class="w-full h-screen">
+  <section class="md:w-full md:h-screen my-20 items-center justify-center">
     <!-- container 1 -->
-    <div class="flex justify-around items-center">
-      <div class="flex flex-col w-full ">
+    <div class="flex justify-between items-center">
+      <div class="flex flex-col">
         <h4 class="text-red-500 mx-5">Special Dishes</h4>
-        <h1 class="font-bold my-3 mx-5 text-2xl">Stand Out Dishes <br> From Our Dishes</h1>
+        <h1 class="font-bold text-center my-3 mx-5 text-2xl">Stand Out Dishes <br> From Our Dishes</h1>
       </div>
-      <div class="flex justify-center mr-6">
+      <div class="md:flex hidden justify-center mr-6 ">
         <button class="bg-gray-200 w-10 h-10 gap-x-3 p-1 rounded-full items-center ml-4"> < </button>
         <button class="bg-[rgba(57,219,74,1)] w-10 h-10 space-x-4 p-1 rounded-full items-center 
         ml-4 text-white"> > </button>
       </div>
     </div>
      <!--container 2 with 3 salad cards-->
-      <div class="flex justify-between p-28">
+      <div class="md:flex my-50 items-center space-y-8 md:justify-between justify-center p-10">
         <!-- salad 1 -->
-        <div class=" flex-col  w-60 h-max items-center shadow-lg rounded-xl bg-white
+        <div class="flex-col w-70 md:w-60 md:h-max items-center shadow-lg rounded-xl bg-white
          p-10 transition-transform duration-500 ease-in-out hover:scale-110">
-         <div class="w-10 h-10 bg-[rgba(57,219,74,1)] -mt-10 ml-40 rounded-bl-2xl rounded-tr-2xl p-3">
+         <div class="hidden w-10 h-10 bg-[rgba(57,219,74,1)] -mt-10  ml-40 rounded-bl-2xl rounded-tr-2xl p-3">
           <img src="./images/fi-sr-heart.png" alt="heart" class="w-4 h-4">
          </div>
          <div class="flex justify-center">
           <img src="./images/Fattoush salad.png" alt="bread" class="w-32 h-32 transition-transform ease-in-out
-          duration-1000 hover:-rotate-180">
+          duration-[17s] hover:-rotate-[360deg]">
          </div>
          <h3 class="mt-2 font-medium">Fattoush salad</h3>
          <p class="text-sm text-gray-500">Description of items</p>
@@ -181,14 +181,12 @@
          </div>
         </div>
         <!-- salad 2 -->
-        <div class=" flex-col  w-60 h-max border-s-green-400 
-         items-center shadow-lg rounded-xl bg-white p-10 transition-transform duration-500 ease-in-out hover:scale-110">
-         <div class="w-10 h-10 bg-[rgba(57,219,74,1)] -mt-10 ml-40 rounded-bl-2xl rounded-tr-2xl p-3">
+        <div class=" flex-col w-70 md:w-60 md:h-max items-center shadow-lg rounded-xl bg-white p-10 transition-transform duration-500 ease-in-out hover:scale-110">
+         <div class="hidden w-10 h-10 bg-[rgba(57,219,74,1)] -mt-10 md:ml-40 rounded-bl-2xl rounded-tr-2xl p-3">
           <img src="./images/fi-br-heart.png" alt="heart" class="w-4 h-4">
          </div>
          <div class="flex justify-center">
-           <img src="./images/Vegetable salad.png" alt="bread" class="w-32 h-32 transition-transform ease-in-out
-           duration-1000 hover:-rotate-180">
+           <img src="./images/Vegetable salad.png" alt="bread" class="w-32 h-32 transition-transform ease-in-out duration-[17s] hover:-rotate-[360deg]">
          </div>
          <h3 class="mt-2 font-medium">Vegetable salad</h3>
          <p class="text-sm text-gray-500">Description of items</p>
@@ -198,14 +196,14 @@
          </div>
         </div>
         <!-- salad 3 -->
-        <div class=" flex-col  w-60 h-max border-s-green-400 
+        <div class=" flex-col w-70 md:w-60 md:h-max border-s-green-400 
          items-center shadow-lg rounded-xl bg-white p-10 transition-transform duration-500 ease-in-out hover:scale-110">
-         <div class="w-10 h-10 bg-[rgba(57,219,74,1)] -mt-10 ml-40 rounded-bl-2xl rounded-tr-2xl p-3">
+         <div class="hidden w-10 h-10 bg-[rgba(57,219,74,1)] -mt-10 ml-40 rounded-bl-2xl rounded-tr-2xl p-3">
           <img src="./images/fi-br-heart.png" alt="heart" class="w-4 h-4">
          </div>
          <div class="flex justify-center">
-          <img src="./images/Egg salad.png" alt="bread" class="w-32 h-32 transition-transform ease-in-out
-          duration-1000 hover:-rotate-180">
+          <img src="./images/Egg salad.png" alt="bread" class="w-32 h-32  transition-transform ease-in-out
+          duration-[17s] hover:-rotate-[360deg]">
          </div>
          <h3 class="mt-2 font-medium">Egg Salad</h3>
          <p class="text-sm text-gray-500">Description of items</p>
@@ -217,9 +215,9 @@
       </div>
   </section>
    <!-- this is the testimonial section with 2 containers -->
-  <section class="w-full h-screen flex  p-10 justify-between items-start">
+  <section class="md:w-full md:h-screen md:flex my-20 md:p-10  md:justify-between justify-center md:items-start items-center">
     <!-- first container -->
-      <div class="relative w-1/2 h-full flex justify-center items-center">
+      <div class="md:relative md:w-1/2 my-28 md:my-2 md:h-full flex justify-center items-center">
         <!-- this is div with position relative,border-radius:50%-->
         <div class="relative h-60 w-72 bg-[rgba(57,219,74,1)] rounded-t-full rounded-bl-3xl rounded-br-3xl"> 
            <img src="./images/pngwing 2.png" alt="profile" class="absolute h-[395px]
@@ -235,22 +233,21 @@
         </div>
       </div> 
        <!-- second container for the testimonies -->
-        <div class="w-1/2 h-full justify-center mt-10 items-start">
+        <div class="md:w-1/2 md:h-full my-2 justify-center text-center mt-10 md:items-start">
           <p class="text-red-500">Testimonials</p>
-          <h1 class="font-bold text-5xl mx-auto">What Our Customers 
-            <br>Say about us
+          <h1 class="font-bold md:text-5xl text-lg md:mx-auto">What Our Customers <br> Say about us
           </h1><br>
-          <p class="text-gray-400 text-md">I had the pleasure of dining at FOODI last night and <br>
-            am still raving about hte experience!The attention to <br>
-            detail in presentation and service was impeccable
+          <p class="text-gray-400 md:text-md text-sm">I had the pleasure of dining at FOODI <br>
+             last night and am still raving about the experience! <br> 
+            The attention to detail in presentation and service was impeccable
           </p>
-          <div class="flex w-50 justify-start gap-28">
+          <div class="md:flex hidden w-50 items-center justify-start gap-28">
             <div class="flex relative mt-7 items-center">
               <img src="./images/Mask group.png" alt="1" class="w-12">
               <img src="./images/Mask group-1.png" alt="2" class="w-12 absolute left-[34px]">
               <img src="./images/Mask group-2.png" alt="3" class="w-12 absolute left-[67px]">
             </div>
-            <div class="flex flex-col mt-7 items-center">
+            <div class="flex flex-col mt-7 items-center md:items-start">
               <p>Customer Feedback</p>
                <p class="flex items-center"><img src="fi-sr-star.png" alt="star" class="h-3">4.9 <span class="text-sm text-gray-400"> (18.6k Reviews)</span></p>
             </div>
@@ -258,19 +255,19 @@
         </div>     
   </section>
    <!-- stories and services section having 2 containers -->
-  <section class="w-full h-screen flex gap-2 p-10 justify-between">
+  <section class="md:w-full  md:h-screen md:flex md:gap-2 md:p-10 md:justify-between">
     <!-- first container taking half of the section -->
-    <div class="w-1/2 h-full justify-center items-center mx-5 ml-20">
+    <div class="md:w-1/2 md:h-full md:items-center mx-5 ml-20">
       <p class="text-red-500 mx-2">OUR STORY & SERVICES</p>
-      <h1 class="font-bold text-5xl mx-auto my-10">Our Culinary<br>
+      <h1 class="font-bold md:text-5xl text-xl md:mx-auto md:my-10">Our Culinary<br>
          Of Delectable
       </h1>
       <p class="text-gray-400 text-md font-semibold">Where Each Plate Weaves a Story Of Culinary <br>
         Mastery and Passionate Craftmanship</p>
-        <button class="bg-[rgba(57,219,74,1)] text-white px-6 py-2 mx-3 mt-5 flex rounded-3xl">Explore</button>
+         <button class="bg-[rgba(57,219,74,1)] text-white px-6 py-2 mx-3 mt-5 flex rounded-3xl">Explore</button>
     </div> 
        <!--second container for cards with display grid-->
-        <div class="w-1/2 h-full justify-center items-center grid grid-cols-2 gap-x-2 gap-y-2">
+        <div class="md:w-1/2 md:h-full md:justify-center items-center md:grid flex md:grid-cols-2 flex-col md:gap-x-2 gap-y-2">
           <!-- grid card 1 -->
           <div class=" flex-col  w-44 h-max border-s-green-400 
           items-center shadow-lg rounded-xl bg-white p-5 transition-transform duration-500 ease-in-out hover:scale-110">
@@ -309,7 +306,8 @@
          </div>
       </div>   
   </section>
-  <section class="w-full grid grid-cols-4 ml-20 p-10 justify-center">
+  <section class="md:w-full text-center md:grid flex md:grid-cols-4 flex-col md:ml-20 gap-y-10 p-10
+   justify-center">
     <div class="">
       <h2 class="text-black text-md font-sans font-semibold"><span class="bg-[rgba(57,219,74,1)] text-white p-1 rounded-md">F</span>OODI</h2>
       <p class="text-gray-400 text-sm mt-2">Savor the artistry where <br> every dish is a culinary<br>masterpiece</p>
@@ -335,14 +333,14 @@
       <p class="text-gray-400 text-sm">Social media</p>
     </div>
   </section>
-  <footer class="flex justify-start gap-20 ml-24">
+  <footer class="md:flex md:justify-start justify-center items-center md:gap-20 md:ml-24">
     <div class="flex justify-center gap-4 items-center mx-3">
       <img src="./images/🦆 icon _facebook_.png" alt="facebook " class="bg-[rgba(57,219,74,1)] rounded-full p-2 w-7 h-7">
       <img src="./images/🦆 icon _instagram_.png" alt="instagram" class="w-4">
       <img src="./images/🦆 icon _twitter_.png" alt="twitter" class="w-4">
       <img src="./images/🦆 icon _youtube_.png" alt="youtube" class="w-4">
     </div>
-    <p class="text-sm text-gray-400">copyright &copy 2023 Dscode|All rights reserved</p>
+    <p class="md:text-sm text-sm text-center text-gray-400">copyright &copy 2023 Dscode|All rights reserved</p>
   </footer>
   <script src="script.js"></script>
 </body>
